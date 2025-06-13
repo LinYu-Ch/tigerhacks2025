@@ -1,0 +1,62 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/src/media/hero-pattern.svg') center/cover;
+  opacity: 0.1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero .btn {
+  background: white;
+  color: var(--color-primary);
+  border: none;
+  font-size: 1.1rem;
+  padding: 1.2rem 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+} 

@@ -1,0 +1,73 @@
+.tracks {
+  background: white;
+}
+
+.tracks .container {
+  max-width: 1400px;
+}
+
+.track-row {
+  margin-bottom: 4rem;
+}
+
+.track-row h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.track-row .prize-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.prize-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  border: 1px solid #eee;
+}
+
+.prize-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prize-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.prize-card h3 {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.prize-card p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .track-row .prize-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .track-row .prize-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .track-row h2 {
+    font-size: 2rem;
+  }
+} 
